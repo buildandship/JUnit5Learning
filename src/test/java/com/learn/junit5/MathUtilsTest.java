@@ -1,10 +1,16 @@
 package com.learn.junit5;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MathUtilsTest {
+
+    @BeforeEach
+    void init(){
+
+    }
 
     @Test
     void testAdd() {
@@ -27,6 +33,7 @@ class MathUtilsTest {
         assertThrows(ArithmeticException.class, () ->   mathUtils.divide(1,0),"Divide by zero should throw an exception");
 
     }
+
 /*
     @Test
     void testFail(){
