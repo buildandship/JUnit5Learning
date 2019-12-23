@@ -17,7 +17,15 @@ class MathUtilsTest {
     @Test
     void testComputeCircleArea(){
         MathUtils mathUtils = new MathUtils();
-        assertEquals(314.159265358979323846, mathUtils.computeCircleArea(10));
+        assertEquals(314.159265358979323846, mathUtils.computeCircleArea(10),"Should return correct circle area");
+    }
+
+    @Test
+    void testDivide(){
+        MathUtils mathUtils = new MathUtils();
+        //assertThrows(Exception Type, Executable Lambda);
+        assertThrows(ArithmeticException.class, () ->   mathUtils.divide(1,0),"Divide by zero should throw an exception");
+
     }
 /*
     @Test
